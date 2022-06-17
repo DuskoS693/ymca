@@ -1,0 +1,53 @@
+//  GRID CSS, styling which controls layout of the site ----------------------------------------------------------------------->
+$grid-cols: 12;
+$max-width: 1214px;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: $max-width;
+}
+
+.grid-tl-nofloat {
+  @include breakpoint(tablet-large) {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto $vertical-margin !important;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+}
+.grid-t-nofloat {
+  @include breakpoint(tablet) {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto $vertical-margin !important;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+.grid-ml-nofloat {
+  @include breakpoint(mobile-large) {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto $vertical-margin !important;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+.grid-m-nofloat {
+  @include breakpoint(mobile) {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto $vertical-margin !important;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+

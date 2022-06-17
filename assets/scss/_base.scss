@@ -1,0 +1,131 @@
+//
+//  BASE CSS basic styles and helpers... ---------------------------------------------------------------------------->
+//
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.clear {
+  clear: both;
+}
+
+// clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: $font-base-size+px;
+}
+body {
+  font-size: $font-base-size+px;
+  font-family: $font-text;
+  color: $text-color;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+.media-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.media-container iframe,
+.media-container object,
+.media-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+}
+.sprite {
+  background-image: url($spriteURL);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.btn, a.btn {
+  @include button();
+  font-family: $font-title, $font-text;
+}
+a {
+  color: $main-color;
+  text-decoration: none;
+  @include transition(all, .3s, ease-in-out);
+}
+a:link {
+  outline: none;
+}
+a:hover, a:focus {
+  color: $second-color;
+  text-decoration: none;
+}
+.el-centered {
+  margin: 0 auto;
+  display: block;
+}
+.el-block {
+  display: block;
+}
+.no-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.el-iblock,
+.inline-boxes {
+  font-size: 0;
+}
+.el-iblock li,
+.inline-box {
+  display: inline-block;
+  vertical-align: top;
+}
+.bgr-style {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+}
+.bgr-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.text-upper {
+  text-transform: uppercase !important;
+}
+
